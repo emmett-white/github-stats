@@ -11,8 +11,12 @@ const showStats = async (git_name) => {
     
     img.src = `https://github-readme-stats.vercel.app/api?username=${git_name}&show_icons=true&theme=radical`;
     img.style.width = '150px';
+    img.setAttribute("class", "image")
 
-    document.querySelector('.body').appendChild(img);
+    document.querySelector('.image') === null
+        ? document.querySelector('.body').appendChild(img)
+        : document.querySelector('.image').src = img.src;
+    
     
     slider.style.display = 'block';
     slider.addEventListener('input', (e) => {
