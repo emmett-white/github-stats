@@ -51,4 +51,5 @@ body {
 
 .box input[type="range"] {
     display: none;
+    margin-left: 120px;
 }
