@@ -13,11 +13,9 @@ const showStats = async (git_name) => {
     img.style.width = '150px';
     img.setAttribute("class", "image")
 
-    if (document.querySelector('.image') === null) {
-        document.querySelector('.body').appendChild(img);
-    } else {
-        document.querySelector('.image').src = img.src;
-    }
+    document.querySelector('.image') === null
+        ? document.querySelector('.body').appendChild(img)
+        : document.querySelector('.image').src = img.src;
     
     
     slider.style.display = 'block';
